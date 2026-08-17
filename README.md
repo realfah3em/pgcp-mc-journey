@@ -1,4 +1,4 @@
-# PG-DMC Journey
+# PGCP-MC Journey
 
 Documenting my coursework in **PGCP-MC (Post Graduate Certificate Programme in Mobile Computing)** at Sunbeam Institute (a C-DAC ACTS training centre) — following the official curriculum from programming foundations through to mobile app development.
 
