@@ -34,6 +34,7 @@ Each module folder gets its own short README with exercises and notes as that se
 | Date | Module | Notes |
 |------|--------|-------|
 | 2026-08-17 | 01-c-programming | Started with fundamentals |
+| 2026-08-21 | 05-java-oop	|     Started Java programming  |
 
 *(See [PROGRESS.md](./PROGRESS.md) for the full log.)*
 
