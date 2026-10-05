@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Destructuring</h1>
+
+    <script>
+      function function1() {
+        // array destructuring
+        // - remove values 20 and 40 from array
+        //   and store them in n1 and n2
+        const [n1, n2] = [20, 40]
+        console.log(`n1 = ${n1}, n2 = ${n2}`)
+      }
+
+      // function1()
+
+      function function2() {
+        // array destructuring
+        const [n1, n2, ...n3] = [10, 20, 30, 40, 50]
+        console.log(`n1 = ${n1}, n2 = ${n2}, n3 = ${n3}`)
+      }
+
+      // function2()
+
+      function function3() {
+        // object
+        const person = {
+          name: 'person1',
+          age: 40,
+          address: 'pune',
+        }
+
+        // read object properties
+        // console.log(`name = ${person.name}, age = ${person.age}, address: ${person.address}`)
+
+        // object destructuring
+        // here name, age and address will be created as variables
+        // storing the respective valuess
+        const { name, address, age } = person
+        console.log(`name = ${name}, age = ${age}, address: ${address}`)
+      }
+
+      // function3()
+
+      function function4() {
+        let n1 = 10
+        let n2 = 20
+        console.log(`n1 = ${n1}, n2 = ${n2}`)
+
+        // let temp = n1
+        // n1 = n2
+        // n2 = temp
+        // console.log(`n1 = ${n1}, n2 = ${n2}`)
+
+        // first a new array will be generated with values [20, 10]
+        // and then n1 will get 20 and n2 will get 10 from the array
+        // [n1, n2] = [20, 10]
+        ;[n1, n2] = [n2, n1]
+        console.log(`n1 = ${n1}, n2 = ${n2}`)
+      }
+
+      function4()
+    </script>
+  </body>
+</html>

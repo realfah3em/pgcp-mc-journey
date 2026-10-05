@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Reduce</h1>
+    <script>
+      function function1() {
+        // array of numbers
+        const numbers = [10, 20, 30, 40, 50]
+        console.log(numbers)
+
+        // get the addition of all values
+        let sum = 0
+        for (const value of numbers) {
+          sum += value
+        }
+        console.log(`sum = ${sum}`)
+      }
+
+      // function1()
+
+      function function2() {
+        // array of numbers
+        const numbers = [10, 20, 30, 40, 50]
+        console.log(numbers)
+
+        // n1 + n2
+        // 10 + 20
+        // 30 + 30
+        // 60 + 40
+        // 100 + 50
+        const sum = numbers.reduce((n1, n2) => n1 + n2)
+        console.log(`sum = ${sum}`)
+      }
+
+      function2()
+    </script>
+  </body>
+</html>

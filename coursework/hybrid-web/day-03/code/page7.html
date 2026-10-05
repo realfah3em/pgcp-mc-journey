@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>page7</title>
+    <style>
+      div.item {
+        background-color: red;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        font-size: 40px;
+        color: white;
+        border-radius: 5px;
+      }
+
+      .div1 {
+        display: flex;
+        flex-direction: row;
+        border: solid gray;
+      }
+      .div2 {
+        display: flex;
+        flex-direction: row-reverse;
+        border: solid gray;
+      }
+      .div3 {
+        display: flex;
+        flex-direction: column;
+        border: solid gray;
+      }
+      .div4 {
+        display: flex;
+        flex-direction: column-reverse;
+        border: solid gray;
+        height: 250px;
+      }
+      .div5 {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        border: solid gray;
+      }
+      .div6 {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        border: solid gray;
+      }
+      .div7 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border: solid gray;
+      }
+      .div8 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        border: solid gray;
+      }
+      .div9 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        border: solid gray;
+      }
+      .div10 {
+        display: flex;
+        flex-direction: column;
+        border: solid gray;
+        height: 300px;
+
+        /* main axis: horizontal */
+        justify-content: center;
+
+        /* cross axis: vertical */
+        align-items: center;
+
+        gap: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Flexbox</h1>
+
+    <h2>flex-direction: row</h2>
+    <div class="div1">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+    </div>
+
+    <h2>flex-direction: row-reverse</h2>
+    <div class="div2">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+    </div>
+
+    <h2>flex-direction: column</h2>
+    <div class="div3">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+    </div>
+
+    <h2>flex-direction: column-reverse</h2>
+    <div class="div4">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+    </div>
+    <hr />
+
+    <h2>flex-direction: row & justify-content: flex-start</h2>
+    <div class="div5">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+    </div>
+    <h2>flex-direction: row & justify-content: flex-end</h2>
+    <div class="div6">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+    </div>
+    <h2>flex-direction: row & justify-content: space-between</h2>
+    <div class="div7">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+    </div>
+    <h2>flex-direction: row & justify-content: space-evenly</h2>
+    <div class="div8">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+    </div>
+    <h2>flex-direction: row & justify-content: space-around</h2>
+    <div class="div9">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+    </div>
+
+    <h2>flex-direction: row & align-items: center</h2>
+    <div class="div10">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+    </div>
+  </body>
+</html>

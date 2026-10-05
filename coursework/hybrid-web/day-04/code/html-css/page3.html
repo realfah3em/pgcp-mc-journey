@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>page3</title>
+    <style>
+      @media (max-width: 600px) {
+        /* for mobile phone */
+        body {
+          background-color: blue;
+        }
+
+        .desktop,
+        .tablet {
+          display: none;
+        }
+
+        .mobile {
+          display: block;
+        }
+      }
+
+      @media (min-width: 600px) {
+        /* for tablet */
+        body {
+          background-color: green;
+        }
+
+        .mobile,
+        .desktop {
+          display: none;
+        }
+        .tablet {
+          display: block;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        /* for laptop and onwards */
+        body {
+          background-color: red;
+        }
+
+        .mobile,
+        .tablet {
+          display: none;
+        }
+
+        .desktop {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Responsive Design (Media Queries)</h1>
+    <h2 class="desktop">Running on Desktop</h2>
+    <h2 class="tablet">Running on Tablet</h2>
+    <h2 class="mobile">Running on Mobile Device</h2>
+  </body>
+</html>

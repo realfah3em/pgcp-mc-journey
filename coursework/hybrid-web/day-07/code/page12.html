@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Login user</h1>
+    <div>
+      <div class="form-group">
+        <label for="">Email</label>
+        <input
+          type="email"
+          id="email" />
+      </div>
+      <div class="form-group">
+        <label for="">Password</label>
+        <input
+          type="password"
+          id="password" />
+      </div>
+      <div class="form-group">
+        <button onclick="onLogin()">Login</button>
+      </div>
+    </div>
+
+    <script>
+      function onLogin() {
+        // get the email input object
+        const inputEmail = document.getElementById('email')
+
+        // get the password input object
+        const inputPassword = document.getElementById('password')
+
+        // get email enetered by user
+        const email = inputEmail.value
+
+        // get password entered by password
+        const password = inputPassword.value
+
+        console.log(`email = ${email}, password = ${password}`)
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>map function</h1>
+
+    <script>
+      // map
+      // - function used to transform values
+      // - map always returns an array
+      // - the length of returned array will be same
+      //   as the length of original array
+
+      function function1() {
+        // array of numbers
+        const numbers = [1, 2, 3, 4, 5]
+        console.log(numbers)
+
+        // get square of each number and create an array of it
+        const squares = []
+        for (const value of numbers) {
+          squares.push(value ** 2)
+        }
+        console.log(squares)
+      }
+
+      // function1()
+
+      function function2() {
+        // array of numbers
+        const numbers = [1, 2, 3, 4, 5]
+        console.log(numbers)
+
+        // get square of each number
+        // const squares = numbers.map((number) => {
+        //   return number ** 2
+        // })
+        const squares = numbers.map((n) => n ** 2)
+        console.log(squares)
+      }
+
+      // function2()
+
+      function function3() {
+        // array of km distances
+        const distances = [2, 5, 3, 7, 8, 9, 4]
+        console.log(distances)
+
+        // convert each distance from km to meters
+        // const distanceMeters = []
+        // for (const distance of distances) {
+        //   distanceMeters.push(distance * 1000)
+        // }
+        // console.log(distanceMeters)
+
+        // convert each distance from km to meters
+        const distanceMeters = distances.map((d) => d * 1000)
+        console.log(distanceMeters)
+      }
+
+      // function3()
+
+      function function4() {
+        // array of objects
+        const cars = [
+          {
+            model: 'Toyota Camry',
+            company: 'Toyota',
+            price: 25000,
+            color: 'Blue',
+          },
+          {
+            model: 'Honda Civic',
+            company: 'Honda',
+            price: 18000,
+            color: 'Red',
+          },
+          {
+            model: 'Ford Mustang',
+            company: 'Ford',
+            price: 35000,
+            color: 'Green',
+          },
+          {
+            model: 'Nissan Altima',
+            company: 'Nissan',
+            price: 22000,
+            color: 'Yellow',
+          },
+          {
+            model: 'BMW 3 Series',
+            company: 'BMW',
+            price: 40000,
+            color: 'Black',
+          },
+          {
+            model: 'Mercedes-Benz C-Class',
+            company: 'Mercedes-Benz',
+            price: 50000,
+            color: 'White',
+          },
+          {
+            model: 'Audi A4',
+            company: 'Audi',
+            price: 38000,
+            color: 'Grey',
+          },
+          {
+            model: 'Lexus IS',
+            company: 'Lexus',
+            price: 42000,
+            color: 'Silver',
+          },
+          {
+            model: 'Mazda3',
+            company: 'Mazda',
+            price: 20000,
+            color: 'Gold',
+          },
+          {
+            model: 'Subaru Outback',
+            company: 'Subaru',
+            price: 28000,
+            color: 'Brown',
+          },
+        ]
+
+        // get model of each car
+        // select model from cars;
+        // const models = []
+        // for (const car of cars) {
+        //   models.push(car['model'])
+        // }
+
+        // get model of every car
+        const models = cars.map((car) => car['model'])
+        console.log(models)
+
+        // get model and company of every car
+        // select model, company from cars;
+        const result = cars.map((car) => {
+          return { model: car['model'], company: car['company'] }
+        })
+        console.log(result)
+      }
+
+      function4()
+    </script>
+  </body>
+</html>

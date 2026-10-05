@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Higher order function (HOF)</h1>
+    <script>
+      // add here is a function reference
+      function add(n1, n2) {
+        console.log(`${n1} + ${n2} = ${n1 + n2}`)
+      }
+
+      function subtract(n1, n2) {
+        console.log(`${n1} - ${n2} = ${n1 - n2}`)
+      }
+
+      // higher order function
+      // - function that take a parameter of type function
+      function function1(func) {
+        console.log(`inside function1`)
+        console.log(`func = ${func}, type = ${typeof func}`)
+
+        // call the function using its reference
+        console.log(`calling func`)
+
+        // func will call the function it is referencing
+        func(10, 20)
+      }
+
+      const myFunction1 = function1
+
+      // const num = 10
+      // function1(num)
+      // function1(add)
+      // function1(subtract)
+
+      function function2(func1, func2) {
+        // calling first function
+        func1(10, 20)
+
+        // calling second function
+        func2(30, 10)
+      }
+
+      // function2(add, subtract)
+
+      function function3(p1, p2, func) {
+        console.log(`inside function3`)
+
+        // calling func
+        func(p1, p2)
+      }
+
+      function3(30, 40, add)
+    </script>
+  </body>
+</html>

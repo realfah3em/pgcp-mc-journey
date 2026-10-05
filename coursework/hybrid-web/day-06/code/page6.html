@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Function reference</h1>
+
+    <script>
+      let num1 = 100
+      console.log(`num1 = ${num1}, type = ${typeof num1}`)
+
+      let num2 = num1
+      console.log(`num2 = ${num2}, type = ${typeof num2}`)
+
+      num1 = 500
+      console.log(`num1 = ${num1}, type = ${typeof num1}`)
+      console.log(`num2 = ${num2}, type = ${typeof num2}`)
+
+      console.log('-')
+
+      // named function
+      function function1() {
+        console.log(`inside function1`)
+      }
+      console.log(`function1 = ${function1}, type = ${typeof function1}`)
+
+      // function reference
+      // - reference to a function
+      const myFunction1 = function1
+      console.log(`myFunction1 = ${myFunction1}, type = ${typeof myFunction1}`)
+
+      // function call
+      // function1()
+      // myFunction1()
+
+      // function expression
+      const function2 = function () {
+        console.log(`inside function2`)
+      }
+
+      // function reference
+      const myFunction2 = function2
+      // function2()
+      // myFunction2()
+
+      // arrow function
+      const function3 = () => {
+        console.log(`inside function3`)
+      }
+
+      // function reference
+      const myFunction3 = function3
+      function3()
+      myFunction3()
+    </script>
+  </body>
+</html>

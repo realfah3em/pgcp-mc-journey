@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Variable scopes</h1>
+    <script>
+      // scope: global
+      let num = 200
+      console.log(`outside any function, num = ${num}`)
+
+      function function1() {
+        console.log(`inside function1`)
+        console.log(`num = ${num}`)
+
+        // variable hoisting
+        // accessing the variable before its declaration
+        console.log(`myVar = ${myVar}`)
+
+        var myVar = 100
+        console.log(`myVar = ${myVar}`)
+
+        // since const and let create scopped variable
+        // the variable can not be hoisted
+        // console.log(`salary = ${salary}`)
+
+        // scope: local
+        const salary = 15.5
+        console.log(`salary = ${salary}`)
+      }
+
+      // function1()
+
+      // since salary is declared by function1,
+      // it is a local variable of function1
+      // can not be accessed outside function1
+      // console.log(`salary = ${salary}`)
+
+      // console.log(`myVar = ${myVar}`)
+    </script>
+  </body>
+</html>

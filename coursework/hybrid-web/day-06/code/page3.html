@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Optional Parameters</h1>
+    <script>
+      // since r has a default value, it can be optionally passed
+      function calculateSimpleInterest(p, n, r = 7.5) {
+        console.log(`p = ${p}, n = ${n}, r = ${r}`)
+
+        const interest = (p * n * r) / 100
+        console.log(`interest = ${interest}`)
+      }
+
+      // since the r argument is not passed, the default value will be taken
+      calculateSimpleInterest(100000, 2)
+      calculateSimpleInterest(1000000, 5)
+      calculateSimpleInterest(5000000, 2)
+
+      // since the r value is passed, the value passed will be taken
+      calculateSimpleInterest(4000000, 5, 6.9)
+    </script>
+  </body>
+</html>

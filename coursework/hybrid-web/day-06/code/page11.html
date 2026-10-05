@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Pure and Impure function</h1>
+
+    <script>
+      // scope: global
+      let num = 100
+
+      // impure function
+      // - returns different output for same input
+      function function1() {
+        console.log(`inside function1`)
+        console.log(`num = ${num}`)
+        num += 1
+      }
+
+      // function1()
+      // function1()
+      // function1()
+
+      // pure function
+      // - returns same output for same inputs
+      function function2(p1, p2) {
+        return p1 + p2
+      }
+
+      console.log(function2(10, 20))
+      console.log(function2(10, 20))
+      console.log(function2(10, 20))
+      console.log(function2(20, 20))
+      console.log(function2(20, 20))
+    </script>
+  </body>
+</html>

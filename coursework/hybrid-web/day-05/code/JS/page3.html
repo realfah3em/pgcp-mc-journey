@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>page3</title>
+  </head>
+  <body>
+    <h1>JS Demo</h1>
+    <script>
+      // parameterless function declaration using function keyword
+      function function1() {
+        console.log(`inside function1`)
+      }
+
+      // function invocation
+      // function1()
+      // console.log(`function1 = ${function1}, type = ${typeof function1}`)
+
+      // parameterized function
+      function function2(p1, p2) {
+        console.log(`inside function2`)
+        console.log(`p1 = ${p1}, type = ${typeof p1}`)
+        console.log(`p2 = ${p2}, type = ${typeof p2}`)
+      }
+
+      // function call
+      // function2(10, 20)
+      // function2('test', 50)
+
+      // parameterless function declaration using function expression
+      const function3 = function () {
+        console.log(`inside function3`)
+      }
+
+      // function call
+      // function3()
+      // console.log(`function3 = ${function3}, type = ${typeof function3}`)
+
+      // parameterized function declaration using function expression
+      const function4 = function (number) {
+        // return number * number
+        return number ** 2
+      }
+
+      // console.log(`function4(5) = ${function4(5)}`)
+
+      // function declaration using named function expression
+      const function5 = function fun() {
+        console.log(`inside function5`)
+      }
+
+      // function5()
+
+      // parameterless function declaration using arrow function
+      const function6 = () => {
+        console.log(`inside function6`)
+      }
+
+      // function call
+      // function6()
+
+      // parameterized function declaration using arrow
+      const function7 = (p1, p2) => {
+        console.log(`inside function 7`)
+        console.log(`p1 = ${p1}, p2 = ${p2}`)
+      }
+
+      // function call
+      // function7(10, 40)
+      // function7('test', true)
+
+      // immediately invoked function
+      // ;(function () {
+      //   console.log(`inside test function`)
+      // })()
+
+      // immediately invoked function
+      // ;((p1, p2) => {
+      //   console.log(`inside test function`)
+      //   console.log(`p1 = ${p1}, p2 = ${p2}`)
+      // })(30, 40)
+
+      // function declaration using constructor function
+      const function8 = new Function(
+        'p1',
+        'p2',
+        'console.log(`inside function8`); console.log(`p1 = ${p1}, p2 = ${p2}`)',
+      )
+      function8(10, 20)
+    </script>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Freezing an object</h1>
+    <script>
+      function function1() {
+        // create an object
+        // here reference of object (person) is constant
+        // still the object is mutable
+        const person = {
+          name: 'person1',
+          age: 40,
+          email: 'person1@test.com',
+        }
+
+        // since person is constant, its value can NOT be updated
+        // person = 'test'
+
+        // update the existing prooperties
+        person.name = 'person2'
+        person.age = 50
+
+        // adding a new property
+        person.address = 'pune'
+
+        // deleting existing property
+        delete person['email']
+
+        console.log(person)
+      }
+
+      // function1()
+
+      function function2() {
+        // create an object
+        // here both reference as well as the object are immutable
+        const person = Object.freeze({
+          name: 'person1',
+          age: 40,
+          email: 'person1@test.com',
+        })
+
+        // update the existing prooperties
+        person.name = 'person2'
+        person.age = 50
+
+        // adding a new property
+        person.address = 'pune'
+
+        // deleting existing property
+        delete person['email']
+
+        console.log(person)
+      }
+
+      function2()
+    </script>
+  </body>
+</html>

@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>filter</h1>
+    <script>
+      // filter
+      // - used to filter out the values
+      //   based on the condition provided
+      // - like map, it also returns an array
+      // - unlike map, the length of result may not
+      //   be same as that of the original collection
+
+      function function1() {
+        // array of numbers
+        const numbers = [2, 5, 8, 3, 6, 9, 1, 5]
+        console.log(numbers)
+
+        // find all even numbers
+        const evenNumbers = []
+        for (const number of numbers) {
+          // check if the number is even
+          if (number % 2 == 0) {
+            evenNumbers.push(number)
+          }
+        }
+        console.log(`even numbers = `, evenNumbers)
+      }
+
+      // function1()
+
+      function function2() {
+        // array of numbers
+        const numbers = [2, 5, 8, 3, 6, 9, 1, 5]
+        console.log(numbers)
+
+        // find the even numbers
+        const evenNumbers = numbers.filter((n) => n % 2 == 0)
+        console.log(`even numbers = `, evenNumbers)
+
+        // find the odd numbers
+        const oddNumbers = numbers.filter((n) => n % 2 != 0)
+        console.log(`odd numbers = `, oddNumbers)
+      }
+
+      // function2()
+
+      function function3() {
+        // marks
+        const marks = [50, 30, 20, 10, 0, 9, 30, 47, 39]
+        console.log(marks)
+
+        // find the student who passed in the exam
+        const passed = marks.filter((m) => m >= 15)
+        console.log(passed)
+
+        // find the students who failed in the exam
+        const failed = marks.filter((m) => m < 15)
+        console.log(failed)
+      }
+
+      // function3()
+
+      function function4() {
+        const cars = [
+          {
+            model: 'Toyota Camry',
+            company: 'Toyota',
+            price: 25000,
+            color: 'Blue',
+          },
+          {
+            model: 'Honda Civic',
+            company: 'Honda',
+            price: 18000,
+            color: 'Red',
+          },
+          {
+            model: 'Ford Mustang',
+            company: 'Ford',
+            price: 35000,
+            color: 'Green',
+          },
+          {
+            model: 'Nissan Altima',
+            company: 'Nissan',
+            price: 22000,
+            color: 'Yellow',
+          },
+          {
+            model: 'BMW 3 Series',
+            company: 'BMW',
+            price: 40000,
+            color: 'Black',
+          },
+          {
+            model: 'Mercedes-Benz C-Class',
+            company: 'Mercedes-Benz',
+            price: 50000,
+            color: 'White',
+          },
+          {
+            model: 'Audi A4',
+            company: 'Audi',
+            price: 38000,
+            color: 'Grey',
+          },
+          {
+            model: 'Lexus IS',
+            company: 'Lexus',
+            price: 42000,
+            color: 'Silver',
+          },
+          {
+            model: 'Mazda3',
+            company: 'Mazda',
+            price: 20000,
+            color: 'Gold',
+          },
+          {
+            model: 'Subaru Outback',
+            company: 'Subaru',
+            price: 28000,
+            color: 'Brown',
+          },
+        ]
+
+        // find the affordable cars (price < 30000)
+        const affordableCars = cars.filter((car) => car['price'] < 30000)
+        console.log(affordableCars)
+
+        // find all cars from Nissan
+        const nissanCars = cars.filter((car) => car['company'] == 'Nissan')
+        console.log(nissanCars)
+      }
+
+      // function4()
+
+      function function5() {
+        // array of numbers
+        const numbers = [2, 5, 8, 3, 6, 9, 1, 5]
+        console.log(numbers)
+
+        // find the even numbers
+        const evenNumbers = numbers.filter((n) => n % 2 == 0)
+        console.log(evenNumbers)
+
+        // find square of even numbers
+        const squares = evenNumbers.map((n) => n ** 2)
+        console.log(squares)
+      }
+
+      // function5()
+
+      function function6() {
+        // array of numbers
+        const numbers = [2, 5, 8, 3, 6, 9, 1, 5]
+        console.log(numbers)
+
+        // find cube of odd numbers
+        // chaining
+        const cubes = numbers.filter((n) => n % 2 != 0).map((n) => n ** 3)
+        console.log(cubes)
+      }
+
+      function6()
+    </script>
+  </body>
+</html>

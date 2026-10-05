@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>JS Demo</h1>
+    <script>
+      // number
+      let myvar = 10
+      console.log(`myvar = ${myvar}, type = ${typeof myvar}`)
+
+      // string
+      myvar = 'test'
+      console.log(`myvar = ${myvar}, type = ${typeof myvar}`)
+
+      // boolean
+      myvar = true
+      console.log(`myvar = ${myvar}, type = ${typeof myvar}`)
+
+      // object
+      myvar = { name: 'john' }
+      console.log(`myvar = ${myvar}, type = ${typeof myvar}`)
+
+      // undefined
+      myvar = undefined
+      console.log(`myvar = ${myvar}, type = ${typeof myvar}`)
+
+      // number
+      myvar = 400
+      console.log(`myvar = ${myvar}, type = ${typeof myvar}`)
+
+      let myFunction = () => {
+        console.log(`inside myFunction`)
+      }
+      console.log(`myFunction = ${myFunction}, type = ${typeof myFunction}`)
+
+      myFunction()
+
+      myFunction = 10
+      console.log(`myFunction = ${myFunction}, type = ${typeof myFunction}`)
+
+      // note: here myFunction is a number type variable
+      // calling a number will raise an exception
+      // myFunction()
+    </script>
+  </body>
+</html>

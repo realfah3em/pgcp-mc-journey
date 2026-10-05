@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>page2</title>
+  </head>
+  <body>
+    <h1>JS Demo</h1>
+
+    <script>
+      // primitive vs referenced
+      // - primitive data type stores value directly on stack
+      //   reference gets stored on stack while object gets allocated in heap memory
+      // - primitive can be mutable (declared with let) or immutable (declared with const)
+      //   by default, reference data type is always mutable
+
+      // string variables
+      // " or ' are used to declare a string with single line
+      const firstName = 'steve'
+      console.log(`firstName = ${firstName}, type = ${typeof firstName}`)
+
+      const lastName = 'jobs'
+      console.log(`lastName = ${lastName}, type = ${typeof lastName}`)
+
+      // ` is used for declaring a string with multiple lines
+      const address = `H-105,
+      Pune,
+      Maharashtra,
+      411041
+      `
+      console.log(`address = ${address}, type = ${typeof address}`)
+
+      // number data type
+      const n1 = 100
+      console.log(`n1 = ${n1}, type = ${typeof n1}`)
+
+      const n2 = 15.6
+      console.log(`n2 = ${n2}, type = ${typeof n2}`)
+
+      // const n3 = Infinity
+      const n3 = 10 / 0
+      console.log(`n3 = ${n3}, type = ${typeof n3}`)
+
+      const n4 = NaN
+      console.log(`n4 = ${n4}, type = ${typeof n4}`)
+
+      // boolean
+      const canVote = true
+      console.log(`canVote = ${canVote}, type = ${typeof canVote}`)
+
+      const isActive = false
+      console.log(`isActive = ${isActive}, type = ${typeof isActive}`)
+
+      // undefined
+      // - undefined is both: value as well as a data type
+      let u1
+      console.log(`u1 = ${u1}, type = ${typeof u1}`)
+
+      const u2 = undefined
+      console.log(`u2 = ${u2}, type = ${typeof u2}`)
+
+      // null
+      // - missing value
+      // - difference between undefined and null
+      //   - undefined is not defined yet (memory is not allocated)
+      //   - null is declared as well as defined (memory is allocated)
+      const n = null
+      console.log(`n = ${n}, type = ${typeof n}`)
+
+      // symbol
+      const s1 = Symbol('s1')
+      console.log(`s1 type = ${typeof s1}`)
+
+      // bigint
+      const bi = 1233324442n
+      console.log(`bi = ${bi}, type = ${typeof bi}`)
+    </script>
+  </body>
+</html>

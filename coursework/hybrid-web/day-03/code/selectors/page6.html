@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>page6</title>
+    <style>
+      .box1 {
+        background-color: red;
+        width: 100px;
+        height: 100px;
+      }
+
+      /* when the mouse is on top of box1, apply this rule */
+      .box1:hover {
+        background-color: blue;
+        width: 150px;
+        height: 150px;
+      }
+      button {
+        background-color: rgb(244, 192, 119);
+      }
+      button:hover {
+        background-color: rgb(189, 147, 88);
+        cursor: pointer;
+      }
+
+      tbody tr:nth-child(odd) {
+        background-color: green;
+        color: white;
+      }
+      tbody tr:nth-child(even) {
+        background-color: gray;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Pseudo selector (:)</h1>
+
+    <div class="box1"></div>
+    <hr />
+    <button>click here</button>
+
+    <table border="1">
+      <thead>
+        <tr>
+          <th>no</th>
+          <th>title</th>
+          <th>price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>product1</td>
+          <td>100</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>product1</td>
+          <td>100</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>product1</td>
+          <td>100</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>product1</td>
+          <td>100</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>product1</td>
+          <td>100</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>product1</td>
+          <td>100</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>product1</td>
+          <td>100</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

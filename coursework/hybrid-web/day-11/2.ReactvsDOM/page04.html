@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+</head>
+
+<body>
+    <button onclick="getProducts()">Get Products</button>
+    <ol id="root"></ol>
+    <script>
+        function getProducts() {
+            const startTime = window.performance.now()
+            const ol = document.getElementById('root')
+            for (let i = 1; i <= 10000; i++) {
+                const li = document.createElement('li', null)
+                li.textContent = 'Product - ' + i
+                ol.appendChild(li)
+            }
+            const endTime = window.performance.now()
+            const diff = (endTime - startTime).toFixed(2)
+            console.log(`Time taken - ${diff} ms`)
+            // 10 products -> 0.20
+            // 100 products -> 0.50
+            // 1000 products -> 3.50
+            // 10000 products -> 18.20
+        }
+    </script>
+</body>
+
+</html>

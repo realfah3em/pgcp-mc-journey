@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>page2</title>
+    <style>
+      .div1 .p1 {
+        border-width: 5px;
+        border-style: solid;
+        border-color: red;
+      }
+      .div1 .p2 {
+        border-width: 5px;
+        border-style: dotted;
+        border-color: green;
+      }
+      .div1 .p3 {
+        /* shorthand method */
+        border: 5px blue dashed;
+      }
+
+      .div2 .p1 {
+        border: solid;
+      }
+      .div2 .p2 {
+        border: solid;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      .div2 .p3 {
+        border: solid;
+
+        /* shorthand method */
+        padding: 20px;
+      }
+
+      .div3 .p1 {
+        border: solid;
+      }
+      .div3 .p2 {
+        border: solid;
+        margin-top: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+      }
+      .div3 .p3 {
+        border: solid;
+
+        /* shorthand method */
+        margin: 20px;
+      }
+
+      .div4 .p1 {
+        width: 300px;
+        height: 100px;
+        border: solid;
+        padding: 10px;
+        margin: 10px;
+        box-sizing: content-box;
+      }
+
+      .div4 .p2 {
+        width: 300px;
+        height: 100px;
+        border: solid;
+        padding: 10px;
+        margin: 10px;
+        box-sizing: border-box;
+      }
+
+      .div5 .div1 {
+        border: solid;
+        margin: 20px;
+        padding: 20px;
+        border-radius: 20px;
+        background-color: red;
+        color: white;
+      }
+
+      .div5 .initial {
+        background-color: red;
+        color: white;
+        width: 50px;
+        height: 50px;
+        display: inline-block;
+        font-size: 30px;
+        text-align: center;
+        line-height: 1.5em;
+
+        /* border-radius = half of width will render the element with circle shape */
+        border-radius: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Box Model</h1>
+
+    <h2>Border</h2>
+    <div class="div1">
+      <p class="p1">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio, molestiae. Sapiente, cupiditate tempore sunt
+        vero quo, autem quas facere modi eveniet error doloremque, officiis rem non perferendis fugit quam in?
+      </p>
+      <p class="p2">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio, molestiae. Sapiente, cupiditate tempore sunt
+        vero quo, autem quas facere modi eveniet error doloremque, officiis rem non perferendis fugit quam in?
+      </p>
+      <p class="p3">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio, molestiae. Sapiente, cupiditate tempore sunt
+        vero quo, autem quas facere modi eveniet error doloremque, officiis rem non perferendis fugit quam in?
+      </p>
+    </div>
+    <hr />
+
+    <h2>Padding</h2>
+    <div class="div2">
+      <p class="p1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga numquam possimus quae molestiae sint, sapiente
+        illum ipsum tempora est consequatur rem ipsam dolorem deserunt voluptatem necessitatibus praesentium repellendus
+        aliquid odio?
+      </p>
+      <p class="p2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga numquam possimus quae molestiae sint, sapiente
+        illum ipsum tempora est consequatur rem ipsam dolorem deserunt voluptatem necessitatibus praesentium repellendus
+        aliquid odio?
+      </p>
+      <p class="p3">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga numquam possimus quae molestiae sint, sapiente
+        illum ipsum tempora est consequatur rem ipsam dolorem deserunt voluptatem necessitatibus praesentium repellendus
+        aliquid odio?
+      </p>
+    </div>
+    <hr />
+
+    <h2>Margin</h2>
+    <div class="div3">
+      <div class="p1">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam quos, nihil dignissimos temporibus optio amet
+        esse id fugiat? Perferendis autem laudantium molestias ad id aut iusto architecto, voluptate facere aspernatur.
+      </div>
+      <div class="p2">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam quos, nihil dignissimos temporibus optio amet
+        esse id fugiat? Perferendis autem laudantium molestias ad id aut iusto architecto, voluptate facere aspernatur.
+      </div>
+      <div class="p3">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam quos, nihil dignissimos temporibus optio amet
+        esse id fugiat? Perferendis autem laudantium molestias ad id aut iusto architecto, voluptate facere aspernatur.
+      </div>
+    </div>
+    <hr />
+
+    <h2>Box Sizing</h2>
+    <div class="div4">
+      <div class="p1">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt vero nobis ducimus impedit deleniti eius
+        aspernatur expedita nostrum rerum, labore ipsum, animi autem, tempore aut nisi officia iure iusto corrupti.
+      </div>
+      <div class="p2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti provident cum dicta rerum repellendus unde
+        dolores sint pariatur ducimus quis autem, fugiat facilis officiis voluptas et molestiae placeat iusto tempora.
+      </div>
+    </div>
+
+    <hr />
+    <div class="div5">
+      <div class="div1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime eum nisi quam fugit adipisci, deleniti accusamus
+        ullam, illum exercitationem hic placeat repellendus aperiam sit aspernatur ad libero ut sapiente veritatis!
+      </div>
+      <div class="div2"><span class="initial">A</span> <span>Amit</span></div>
+    </div>
+  </body>
+</html>

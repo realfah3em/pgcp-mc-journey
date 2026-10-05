@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- daisyui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <!-- axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.18.0/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <div class="w-3/4 mx-auto p-2">
+        <button class="btn" onclick="getProducts()">Get Products</button>
+        <div class="overflow-x-auto">
+            <table class="table table-zebra">
+                <thead>
+                    <tr>
+                        <th>image</th>
+                        <th>Pid</th>
+                        <th>Name</th>
+                        <th>description</th>
+                        <th>price</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script>
+        async function getProducts() {
+            const tbody = document.getElementById('tbody')
+
+            const URL = 'https://dummyjson.com/products'
+            try {
+                const response = await axios.get(URL)
+                const products = response.data.products
+                console.log(products)
+                for (p of products) {
+                    const row = `
+                        <tr>
+                            <td><img src='${p.thumbnail}' width="80px" alt=""></td>
+                            <td>${p.id}</td>
+                            <td>${p.title}</td>
+                            <td>${p.description}</td>
+                            <td>${p.price}</td>
+                        </tr>
+                    `
+                    tbody.innerHTML += row
+                }
+            } catch (error) {
+                console.log(error)
+            }
+
+        }
+    </script>
+</body>
+
+</html>

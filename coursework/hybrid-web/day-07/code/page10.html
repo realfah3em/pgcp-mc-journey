@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>DOM interaction</h1>
+    <div id="div1">this is a div</div>
+    <button>click here1</button>
+    <button>click here2</button>
+
+    <script>
+      // document is the DOM in the document
+      console.log(document)
+
+      // get the object of button
+      const buttons = document.getElementsByTagName('button')
+      console.log(`buttons = `, buttons)
+
+      // get the object of h1
+      const h1s = document.getElementsByTagName('h1')
+      console.log(h1s)
+
+      // get the object of div using its id
+      const div = document.getElementById('div1')
+      console.log(div)
+    </script>
+  </body>
+</html>

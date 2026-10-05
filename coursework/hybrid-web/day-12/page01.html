@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="handleButtonClick()">Button1</button>
+    <form onsubmit="handleSubmitClick()">
+        <input type="text" placeholder="name" onchange="handleChange()">
+        <input type="submit" value="save">
+    </form>
+    <script>
+        function handleButtonClick() {
+            console.log('Button clicked')
+            console.log(event)
+        }
+
+        function handleSubmitClick() {
+            event.preventDefault()
+            console.log('Submit clicked')
+            console.log(event)
+        }
+
+        function handleChange() {
+            console.log('change event')
+            console.log(event)
+        }
+    </script>
+</body>
+
+</html>

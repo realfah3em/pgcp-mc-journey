@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>page1</title>
+    <style>
+      p {
+        color: red;
+      }
+
+      /* child selector */
+      div > p {
+        color: green;
+      }
+
+      thead > tr {
+        background-color: green;
+        color: white;
+      }
+
+      tbody > tr {
+        background-color: orange;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Child Selector (>)</h1>
+
+    <p>this is para outside a div</p>
+    <p>this para is also outside the div</p>
+    <p>this para is also outside the div</p>
+    <div>
+      <p>this is a para inside a div</p>
+      <p>this is also a para inside a div</p>
+      <p>this is also a para inside a div</p>
+
+      <ul>
+        <li><p>this para1 is inside li</p></li>
+        <li><p>this para2 is inside li</p></li>
+        <li><p>this para3 is inside li</p></li>
+        <li><p>this para4 is inside li</p></li>
+      </ul>
+    </div>
+
+    <hr />
+
+    <table border="1">
+      <thead>
+        <tr>
+          <th>no</th>
+          <th>title</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>product 1</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>product 2</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

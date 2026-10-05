@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>function return value</h1>
+    <script>
+      // every function returns a value 'undefined' implicitly
+      // function1 returns value undefined implicitly
+      function function1() {
+        console.log(`inside function1`)
+      }
+
+      // call the function and capture return value
+      const returned_value1 = function1()
+      console.log(`returned_value1 = ${returned_value1}`)
+
+      // function2 explicitly returns value 10
+      function function2() {
+        console.log(`inside function2`)
+        return 10
+      }
+
+      const returned_value2 = function2()
+      console.log(`returned_value2 = ${returned_value2}`)
+    </script>
+  </body>
+</html>

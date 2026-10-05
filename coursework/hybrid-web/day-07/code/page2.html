@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Array Searching</h1>
+    <script>
+      function function1() {
+        // create an array of numbers
+        const numbers = [10, 20, 30, 40, 120, 50, 30, 50, 40, 79, 30, 90]
+        console.log(numbers)
+
+        // get the first index from left of value 30
+        // the searching will be performed from left to right
+        console.log(`index of value 30 from left is ${numbers.indexOf(30)}`)
+
+        // get the last index of a value 30 (from right)
+        console.log(`index of value 30 from right is ${numbers.lastIndexOf(30)}`)
+
+        // get index of value 100
+        console.log(`index of value 100 is ${numbers.indexOf(100)}`)
+
+        // check if value 120 is present
+        if (numbers.indexOf(120) == -1) {
+          console.log(`value 120 is NOT present`)
+        } else {
+          console.log(`value 120 is present`)
+        }
+      }
+
+      // function1()
+
+      function function2() {
+        // create an array of numbers
+        const numbers = [10, 20, 30, 40, 50, 30, 50, 40, 79, 30, 90]
+        console.log(numbers)
+
+        // check if value 120 is present
+        if (numbers.includes(120)) {
+          console.log(`value 120 is present`)
+        } else {
+          console.log(`value 120 is NOT present`)
+        }
+
+        // array of string values
+        const names = ['john', 'jane', 'alice', 'bob']
+        if (names.includes('steve')) {
+          console.log(`steve exists`)
+        } else {
+          console.log(`steve does not exist`)
+        }
+      }
+
+      // function2()
+
+      function function3() {
+        // create an array of numbers
+        const numbers = [10, 20, 30, 40, 50, 30, 50, 40, 79, 30, 90]
+        console.log(numbers)
+
+        // find an index of a value matching the condition
+        for (const index in numbers) {
+          if (numbers[index] >= 40) {
+            console.log(`index = ${index}`)
+            break
+          }
+        }
+        console.log('-')
+
+        // find an index of a value matching the condition
+        const index = numbers.findIndex((n) => {
+          console.log(`n = ${n}`)
+          return n >= 40
+        })
+        console.log(`index = ${index}`)
+      }
+
+      // function3()
+
+      function myFindIndex(numbers, func) {
+        console.log(`func = ${func}`)
+        for (const index in numbers) {
+          if (func(numbers[index]) == true) {
+            return index
+          }
+        }
+        return -1
+      }
+
+      function function4() {
+        // create an array of numbers
+        const numbers = [10, 20, 30, 40, 50, 30, 50, 40, 79, 30, 90]
+        console.log(numbers)
+
+        // arrow function
+        const func = (n) => {
+          return n >= 40
+        }
+        // console.log(`func(30) = ${func(30)}`)
+
+        const index = myFindIndex(numbers, func)
+        console.log(`index = ${index}`)
+      }
+
+      // function4()
+
+      function function5() {
+        // array of string values
+        const countries = ['india', 'usa', 'uk', 'china', 'japan']
+        console.log(countries)
+
+        const index1 = countries.indexOf('china')
+        console.log(`index of china = ${index1}`)
+
+        const index2 = countries.findIndex((country) => {
+          return country == 'china'
+        })
+        console.log(`index of china = ${index2}`)
+
+        const index3 = countries.indexOf('australia')
+        console.log(`index of australia = ${index3}`)
+
+        const index4 = countries.findIndex((c) => {
+          return c == 'australia'
+        })
+        console.log(`index of australia = ${index4}`)
+      }
+
+      // function5()
+
+      function function6() {
+        // create an array of numbers
+        const numbers = [10, 20, 30, 40, 50, 30, 50, 40, 79, 30, 90]
+        console.log(numbers)
+
+        // find the value > 50
+        const value = numbers.find((value) => {
+          return value > 50
+        })
+        console.log(`value > 50 = ${value}`)
+
+        // find the index of value > 50
+        const index = numbers.findIndex((value) => {
+          return value > 50
+        })
+        console.log(`index of value > 50 = ${index}`)
+      }
+
+      function6()
+    </script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>DOM interaction</h1>
+    <div id="div1">this is a div</div>
+    <button id="button1">click here 1</button>
+
+    <button onclick="onClickHandler()">click here 2</button>
+
+    <script>
+      console.log(document)
+      function onClickHandler() {
+        // get the object of div
+        const div = document.getElementById('div1')
+
+        // updating the contents
+        div.innerText = 'new content updated using DOM'
+
+        // modify the css properties
+        div.style.color = 'red'
+        div.style.fontSize = '120px'
+      }
+
+      // get an object of the button
+      const button = document.getElementById('button1')
+
+      // here onClickHandler is known as event handler
+      // handler a function
+      button.addEventListener('click', onClickHandler)
+    </script>
+  </body>
+</html>

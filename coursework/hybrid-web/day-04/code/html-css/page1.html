@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>page1</title>
+
+    <style>
+      .item {
+        width: 110px;
+        height: 110px;
+        display: inline-block;
+        border: 1px solid gray;
+        border-radius: 10px;
+      }
+
+      .linear-gradient .to-right {
+        background: linear-gradient(to right, red, yellow);
+      }
+      .linear-gradient .to-left {
+        background: linear-gradient(to left, red, yellow);
+      }
+      .linear-gradient .to-top {
+        background: linear-gradient(to top, red, yellow);
+      }
+      .linear-gradient .to-bottom {
+        background: linear-gradient(to bottom, red, yellow);
+      }
+      .linear-gradient .to-top-right {
+        background: linear-gradient(to top right, red, yellow);
+      }
+      .linear-gradient .to-top-left {
+        background: linear-gradient(to top left, red, yellow);
+      }
+      .linear-gradient .to-bottom-right {
+        background: linear-gradient(to bottom right, red, yellow);
+      }
+      .linear-gradient .to-bottom-left {
+        background: linear-gradient(to bottom left, red, yellow);
+      }
+
+      .radial-gradient .top-left {
+        background: radial-gradient(circle at top left, green, yellow);
+      }
+      .radial-gradient .center {
+        background: radial-gradient(circle at center, green, yellow);
+      }
+      .radial-gradient .bottom-right {
+        background: radial-gradient(circle at bottom right, green, yellow);
+      }
+      .radial-gradient .percent {
+        background: radial-gradient(circle at 20% 80%, green, yellow);
+      }
+
+      .conic-gradient .angle1 {
+        background: conic-gradient(from 45deg, red, green, blue, yellow);
+      }
+      .conic-gradient .angle2 {
+        background: conic-gradient(from 90deg, red, green, blue, yellow);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Gradients</h1>
+    <hr />
+    <h2>Linear Gradient</h2>
+    <div class="linear-gradient">
+      <div class="item to-right"></div>
+      <div class="item to-left"></div>
+      <div class="item to-top"></div>
+      <div class="item to-bottom"></div>
+
+      <div class="item to-top-left"></div>
+      <div class="item to-top-right"></div>
+      <div class="item to-bottom-left"></div>
+      <div class="item to-bottom-right"></div>
+    </div>
+
+    <hr />
+    <h2>Radial Gradient</h2>
+    <div class="radial-gradient">
+      <div class="item top-left"></div>
+      <div class="item center"></div>
+      <div class="item bottom-right"></div>
+      <div class="item percent"></div>
+    </div>
+    <hr />
+
+    <h2>Conic Gradient</h2>
+    <div class="conic-gradient">
+      <div class="item angle1"></div>
+      <div class="item angle2"></div>
+    </div>
+  </body>
+</html>

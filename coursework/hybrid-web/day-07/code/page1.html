@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Array Basic Operations</h1>
+    <script>
+      function function1() {
+        // create an array of numbers
+        const numbers = [10, 20, 30, 40, 50]
+        console.log(numbers)
+
+        // append a new value
+        numbers.push(60)
+        console.log(numbers)
+
+        // remove last value
+        numbers.pop()
+        console.log(numbers)
+
+        // insert a value at 1st position
+        numbers.splice(1, 0, 15)
+        console.log(numbers)
+
+        // remove a value at 1st position
+        numbers.splice(1, 1)
+        console.log(numbers)
+
+        // replace a valuat at 2nd position
+        numbers.splice(2, 1, 31)
+        console.log(numbers)
+      }
+
+      // function1()
+    </script>
+  </body>
+</html>

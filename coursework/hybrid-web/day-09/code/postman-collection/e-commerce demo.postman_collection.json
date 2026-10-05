@@ -1,0 +1,310 @@
+{
+  "info": {
+    "_postman_id": "efe613d9-55ed-4a3c-857c-9108b70aa115",
+    "name": "e-commerce demo",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "418976",
+    "_collection_link": "https://go.postman.co/collection/418976-efe613d9-55ed-4a3c-857c-9108b70aa115?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Users",
+      "item": [
+        {
+          "name": "registration",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"firstName\": \"alice\",\n    \"lastName\": \"doe\",\n    \"email\": \"alice@test.com\",\n    \"password\": \"test\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/user/register",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "user",
+                "register"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "login",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"email\": \"john@test.com\",\n    \"password\": \"test\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/user/login",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "user",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get profile",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/user/profile",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "user",
+                "profile"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "products",
+      "item": [
+        {
+          "name": "list of products",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "token",
+                "value": "{{json_web_token_18wp}}"
+              }
+            ],
+            "url": {
+              "raw": "{{BASE_URL}}/product/",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "product",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "token",
+                  "value": "sadasfasaadfafsd",
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "add product",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"title\": \"Sony PlayStation 5\",\n    \"brand\": \"Sony\",\n    \"tags\": \"Gaming Console, Electronics\",\n    \"category\": \"Electronics\",\n    \"description\": \"Amazing gaming console\",\n    \"price\": 499.99\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/product/",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "product",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete product",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/product/2",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "product",
+                "2"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "add product with image",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "token",
+                "value": "{{json_web_token_1801}}"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "image",
+                  "type": "file",
+                  "src": [
+                    "/private/tmp/sony-ps.jpeg"
+                  ]
+                },
+                {
+                  "key": "title",
+                  "value": "Sony playstation 5",
+                  "type": "text"
+                },
+                {
+                  "key": "description",
+                  "value": "Amazing gaming console",
+                  "type": "text"
+                },
+                {
+                  "key": "brand",
+                  "value": "sony",
+                  "type": "text"
+                },
+                {
+                  "key": "tags",
+                  "value": "Gaming Console, Electronics",
+                  "type": "text"
+                },
+                {
+                  "key": "category",
+                  "value": "Electronics",
+                  "type": "text"
+                },
+                {
+                  "key": "price",
+                  "value": "999.99",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/product/with-image",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "product",
+                "with-image"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "orders",
+      "item": [
+        {
+          "name": "list of orders",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/order/",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "order",
+                ""
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "cart",
+      "item": [
+        {
+          "name": "list of items",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/cart",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "cart"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "welcome",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{BASE_URL}}",
+          "host": [
+            "{{BASE_URL}}"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "BASE_URL",
+      "value": ""
+    },
+    {
+      "key": "json_web_token_114w",
+      "secret": true
+    },
+    {
+      "key": "json_web_token_1801",
+      "secret": true
+    },
+    {
+      "key": "json_web_token_18wp",
+      "secret": true
+    }
+  ]
+}

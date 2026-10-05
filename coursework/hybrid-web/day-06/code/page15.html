@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Array Demo</h1>
+
+    <script>
+      function function1() {
+        // create an array using []
+        const numbers = [10, 20, 30, 40, 50]
+        console.log(numbers)
+        console.log(`type of numbers = ${typeof numbers}`)
+
+        // create an array using Array function
+        const a1 = new Array(5)
+        console.log(a1)
+
+        // create an array using Array function
+        const a2 = new Array(10, 20, 30, 40, 50)
+        console.log(a2)
+      }
+
+      // function1()
+
+      function function2() {
+        // create an array with different data types
+        const mixed = [10, 15.5, true, 'india', null, undefined]
+        console.log(mixed)
+
+        // sparse array
+        const sparse = [10, , 20, 30, , 50]
+        console.log(sparse)
+
+        // create an array
+        const numbers = [10, 20, 30, 40, 50]
+        console.log(numbers)
+        console.log(`length = ${numbers.length}`)
+
+        // reduce the length property
+        numbers.length = 3
+        console.log(numbers)
+
+        // increase the length property
+        numbers.length = 10
+        console.log(numbers)
+      }
+
+      // function2()
+
+      function function3() {
+        // array of numbers
+        const numbers = [10, 20, 30, 40, 50]
+        console.log(numbers)
+
+        // add a new value at the end of the array
+        numbers.push(60)
+        console.log(numbers)
+
+        // add a new value at the end of the array
+        numbers.push(70)
+        console.log(numbers)
+
+        // adding multiple values together
+        // numbers.push([80, 90])
+        // console.log(numbers)
+      }
+
+      // function3()
+
+      function function4() {
+        // array of numbers
+        const numbers = [10, 20, 30, 40, 50]
+        console.log(numbers)
+
+        // remove the last value
+        const value = numbers.pop()
+        console.log(numbers)
+        console.log(`value removed = ${value}`)
+      }
+
+      // function4()
+
+      function function5() {
+        // array of numbers
+        const numbers = [10, 20, 30, 40, 50]
+        console.log(numbers)
+
+        // add a value 15 between 10 and 20
+        // param1: start position
+        // param2: no of positions to be removed
+        // param3: value to be added
+        numbers.splice(1, 0, 15)
+        console.log(numbers)
+
+        // add a value 25 between 20 and 30
+        numbers.splice(3, 0, 25)
+        console.log(numbers)
+      }
+
+      // function5()
+
+      function function6() {
+        // array of strings
+        const countries = ['india', 'us', 'uk', 'china', 'japan', 'bhutan']
+        console.log(countries)
+
+        // delete china
+        countries.splice(3, 1)
+        console.log(countries)
+
+        // replace 'us' with 'usa'
+        countries.splice(1, 1, 'usa')
+        console.log(countries)
+      }
+
+      function6()
+    </script>
+  </body>
+</html>

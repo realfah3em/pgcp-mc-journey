@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>page5</title>
+    <style>
+      input[type='text'] {
+        background-color: green;
+        color: white;
+      }
+
+      input[type='email'] {
+        background-color: orange;
+        color: white;
+      }
+
+      input[type='tel'] {
+        background-color: blue;
+        color: white;
+      }
+
+      a[href^='http'] {
+        color: green;
+      }
+
+      a[href^='https'] {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Attribute Selector ([])</h1>
+
+    <form>
+      <div>
+        <label for="">First Name</label>
+        <input type="text" />
+      </div>
+      <div>
+        <label for="">Last Name</label>
+        <input type="text" />
+      </div>
+      <div>
+        <label for="">Email</label>
+        <input type="email" />
+      </div>
+      <div>
+        <label for="">Phone number</label>
+        <input type="tel" />
+      </div>
+      <div>
+        <input
+          type="submit"
+          value="Register" />
+      </div>
+    </form>
+
+    <hr />
+
+    <div>
+      <a href="https://google.com">google</a>
+      <a href="http://localhost:8080">localhost</a>
+    </div>
+  </body>
+</html>

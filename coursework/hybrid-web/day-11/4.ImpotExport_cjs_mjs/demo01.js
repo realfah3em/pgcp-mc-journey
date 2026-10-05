@@ -1,0 +1,7 @@
+const math = require('./Math1')
+console.log(math)
+console.log(typeof math)
+// math()
+math.add()
+math.substract()
+// mul()

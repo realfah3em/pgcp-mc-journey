@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React VDOM</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+</head>
+
+<body>
+    <button onclick="getProducts()">Get Products</button>
+    <ol id="root"></ol>
+    <script>
+        function getProducts() {
+            const root = ReactDOM.createRoot(document.getElementById('root'))
+            const startTime = window.performance.now()
+            const arr = []
+            for (let i = 1; i <= 10000; i++) {
+                const li = React.createElement('li', null, 'Product - ' + i)
+                arr.push(li)
+            }
+            root.render(arr)
+            const endTime = window.performance.now()
+            const diff = (endTime - startTime).toFixed(2)
+            console.log('Time taken - ' + diff + ' ms')
+            // 10 products -> 0.20 / 1.70
+            // 100 products -> 0.50 / 1.90
+            // 1000 products -> 3.50 / 1.70
+            // 10000 products -> 18.20 // 11.30
+
+        }
+    </script>
+</body>
+
+</html>

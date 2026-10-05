@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Map Demo</h1>
+    <script>
+      function function1() {
+        // create a map
+        const map = new Map()
+        console.log(map)
+
+        // add key-value pairs
+        map.set('name', 'person1')
+        map.set('email', 'person1@test.com')
+        map.set(50, 'even_number')
+        console.log(map)
+
+        // get the value of key
+        console.log(`name = ${map.get('name')}`)
+        console.log(`email = ${map.get('email')}`)
+        console.log(`50 = ${map.get(50)}`)
+
+        // add new key-value pair
+        map.set('address', 'pune')
+        console.log(map)
+
+        // update existing key
+        map.set('email', 'person1@sunebaminfo.com')
+        console.log(map)
+
+        // delete a key-value pair
+        map.delete('address')
+        console.log(map)
+        console.log(`size of map = ${map.size}`)
+
+        // delete all key-value pairs
+        map.clear()
+        console.log(map)
+        console.log(`size of map = ${map.size}`)
+      }
+
+      // function1()
+
+      function function2() {
+        const map = new Map([
+          ['name', 'person1'],
+          ['age', 50],
+        ])
+
+        console.log(map)
+
+        // iterate over the map
+        for (const item of map) {
+          console.log(`key = ${item[0]}, value = ${item[1]}`)
+        }
+        console.log('-')
+
+        // iterate over the map
+        for (const item of map) {
+          // array destructuring
+          const [key, value] = item
+          console.log(`key = ${key}, value = ${value}`)
+        }
+        console.log('-')
+
+        // iterate over the map
+        for (const [key, value] of map) {
+          console.log(`key = ${key}, value = ${value}`)
+        }
+        console.log('-')
+      }
+
+      // function2()
+
+      function function3() {
+        // object
+        const person = {
+          name: 'person1',
+          age: 40,
+          hobbies: ['watching movies', 'listing music'],
+        }
+
+        // destructuring object
+        const { name, age, hobbies } = person
+        console.log(`name = ${name}`)
+        console.log(`age = ${age}`)
+        console.log(`hobbies = `, hobbies)
+      }
+
+      function3()
+    </script>
+  </body>
+</html>

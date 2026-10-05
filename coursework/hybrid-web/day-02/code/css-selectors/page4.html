@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>page4</title>
+    <style>
+      /* select all the p elements */
+      p {
+        font-size: 20px;
+      }
+
+      /* select the element having id as element1 */
+      #element1 {
+        color: red;
+      }
+
+      /* select the p element having id as element6 */
+      p#element6 {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>ID Selector (#)</h1>
+
+    <p id="element1">this is para 1</p>
+    <p>this is para 2</p>
+    <p>this is para 3</p>
+    <p>this is para 4</p>
+    <p>this is para 5</p>
+    <p id="element6">this is para 6</p>
+    <hr />
+
+    <!-- it is discouraged to have multiple elements sharing the same id -->
+    <div id="element1">this is div 1</div>
+    <div>this is div 2</div>
+    <div>this is div 3</div>
+    <div>this is div 4</div>
+    <div>this is div 5</div>
+    <div id="element6">this is div 6</div>
+  </body>
+</html>

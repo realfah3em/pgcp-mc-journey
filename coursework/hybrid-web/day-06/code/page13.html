@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Object Properties</h1>
+
+    <script>
+      // create an object
+      const person = {
+        name: 'person1',
+        age: 40,
+        email: 'person1@test.com',
+        address: 'pune',
+        'present address': 'pune',
+      }
+
+      // access the members using [] notation
+      console.log(`name = ${person['name']}`)
+      console.log(`address = ${person['address']}`)
+      console.log(`age = ${person['age']}`)
+      console.log(`email = ${person['email']}`)
+      console.log(`present address = ${person['present address']}`)
+      console.log('-')
+
+      // access the members using dot notation
+      console.log(`name = ${person.name}`)
+      console.log(`address = ${person.address}`)
+      console.log(`age = ${person.age}`)
+      console.log(`email = ${person.email}`)
+      // console.log(`present address = ${person.present address}`)
+      console.log('-')
+
+      console.log(person)
+      console.log('-')
+
+      // assign members to the object
+      person['salary'] = 15.5
+      person.state = 'maharashtra'
+      console.log(person)
+    </script>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>local/nested/inner function</h1>
+    <script>
+      // local function
+      // - also known as inner or nested function
+      // - can access all the members (including the parameters and local variables)
+      //   of outer function
+      // - but outer function can NOT access any member of inner function
+      // - one inner function can access another inner function
+
+      // scope: global
+      function function1() {
+        console.log('inside function1')
+
+        // scope: local
+        const num = 100
+        console.log(`num = ${num}`)
+
+        // scope: local
+        function innerFunction() {
+          console.log(`inside innerFunction`)
+        }
+
+        // scope: local
+        function function2() {
+          console.log(`inside function2`)
+
+          const myFunction2Var = 500
+          console.log(`myFunction2Var = ${myFunction2Var}`)
+
+          // can access outer function's local member
+          console.log(`num = ${num}`)
+
+          // scope: local
+          function function3() {
+            console.log('inside function3')
+          }
+
+          function3()
+
+          // calling innerFunction
+          innerFunction()
+        }
+
+        // call function2
+        function2()
+
+        // since myFunction2Var is member of inner function
+        // it can NOT accessed here in outer function
+        // console.log(`myFunction2Var = ${myFunction2Var}`)
+
+        // call innerFunction
+        // innerFunction()
+
+        // since function3 is a local function of function2
+        // it can not be accessed here
+        // funciton3()
+      }
+
+      function1()
+
+      // since num is a local variable of function1
+      // it can NOT be accessed here
+      // console.log(`num = ${num}`)
+
+      // since function2 is a local function of function1
+      // it can NOT be accessed here
+      // function2()
+    </script>
+  </body>
+</html>

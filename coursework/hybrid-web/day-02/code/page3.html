@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>page3</title>
+  </head>
+  <body>
+    <h1>Media Tags Demo</h1>
+
+    <div>
+      <h2>Images</h2>
+      <img
+        width="100px"
+        src="images/image.jpg"
+        alt="image1 here" />
+      <img
+        width="100px"
+        src="images/image2.jpg"
+        alt="" />
+      <img
+        width="100px"
+        src="images/image3.jpg"
+        alt="" />
+    </div>
+
+    <div>
+      <h2>Images</h2>
+      <figure>
+        <img
+          width="100px"
+          src="images/image2.jpg"
+          alt="" />
+        <figcaption>This is a black dog</figcaption>
+      </figure>
+      <figure>
+        <picture>
+            <source media="(min-width: 100px)" src="images/image1.jpg"></source>
+        </picture>
+        <figcaption>This is a black dog</figcaption>
+      </figure>
+    </div>
+
+    <div>
+        <h2>Video</h2>
+        <video width="300px" controls autoplay>
+            <source src="videos/sample.mp4"></source>
+        </video>
+    </div>
+
+    <div>
+        <h2>Audio</h2>
+        <audio controls>
+            <source src="audio-files/sample.mp3" ></source>
+        </audio>
+    </div>
+  </body>
+</html>

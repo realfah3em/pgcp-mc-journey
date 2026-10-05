@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>page8</title>
+    <style>
+      :root {
+        /* define all global variables */
+        --text-color: red;
+        --font-size: 20px;
+      }
+
+      .my-style {
+        /* local variable */
+        --background-color: blue;
+
+        /* overriding the value of global variable */
+        --text-color: white;
+
+        background-color: var(--background-color);
+        color: var(--text-color);
+      }
+
+      div {
+        font-size: var(--font-size);
+        color: var(--text-color);
+      }
+
+      span {
+        font-size: var(--font-size);
+        color: var(--text-color);
+      }
+
+      p {
+        font-size: var(--font-size);
+        color: var(--text-color);
+      }
+
+      li {
+        /* since the variable --background-color is locally scopped
+           it is not accessible here */
+        background-color: var(--background-color);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Variables</h1>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure magnam doloremque maiores earum fugit dicta
+      voluptate! Voluptas dolorum tempore vitae quam iusto amet impedit doloribus quidem corporis, molestiae magnam
+      ratione.
+    </div>
+    <hr />
+
+    <span
+      >Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure deserunt laboriosam itaque explicabo deleniti
+      consectetur, ea dolorum aut sunt illo adipisci facilis. Eligendi quam vel velit officia harum, iure
+      explicabo.</span
+    >
+    <hr />
+
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis eum nulla aspernatur, beatae voluptates esse
+      possimus fugiat illum. Nostrum repellat voluptatum sit qui sint deserunt exercitationem, labore libero est! Quam?
+    </p>
+
+    <p class="my-style">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore libero officia blanditiis mollitia velit
+      laboriosam, aliquid natus deserunt, maiores accusamus neque itaque, numquam omnis debitis. Explicabo corrupti ad
+      labore molestias!
+    </p>
+    <ul>
+      <li>item1</li>
+    </ul>
+  </body>
+</html>

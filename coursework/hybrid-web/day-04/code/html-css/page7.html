@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>page7</title>
+    <style>
+      div {
+        font-size: 30px;
+      }
+      .blur {
+        filter: blur(5px);
+      }
+
+      img {
+        width: 400px;
+      }
+
+      .brightness {
+        filter: brightness(200%);
+      }
+      .contrast {
+        filter: contrast(200%);
+      }
+      .grayscale {
+        filter: grayscale(200%);
+      }
+      .grayscale:hover {
+        filter: grayscale(0);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Filters</h1>
+
+    <div class="blur">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel reiciendis perferendis, error sit illum neque, velit
+      repellendus adipisci sunt dolore eveniet cumque pariatur! Labore veniam voluptates, ea esse aperiam nesciunt.
+    </div>
+
+    <img
+      src="images/nature.jpg"
+      alt="" />
+
+    <img
+      class="blur"
+      src="images/nature.jpg"
+      alt="" />
+
+    <img
+      class="brightness"
+      src="images/nature.jpg"
+      alt="" />
+
+    <img
+      class="contrast"
+      src="images/nature.jpg"
+      alt="" />
+    <img
+      class="grayscale"
+      src="images/nature.jpg"
+      alt="" />
+  </body>
+</html>

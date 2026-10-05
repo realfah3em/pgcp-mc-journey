@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="home()">Home</button>
+    <button onclick="branches()">Branches</button>
+    <button onclick="contactus()">Contact us</button>
+    <div id="root"></div>
+    <script>
+        const root = document.getElementById('root')
+        function home() {
+            const div = `
+                <div>
+                    <h1>Home</h1>
+                </div> `
+            root.innerHTML = div
+        }
+
+        function branches() {
+            const div = `
+                <div>
+                    <h1>Branches</h1>
+                    <h2>Pune</h2>
+                    <h2>Karad</h2>
+                </div>`
+            root.innerHTML = div
+        }
+
+        function contactus() {
+            const div = ` 
+                <div>
+                    <h1>Contactus</h1>
+                    <p>email</p>
+                    <p>phone</p>
+                    <p>address</p>
+                </div>`
+            root.innerHTML = div
+        }
+        home()
+    </script>
+</body>
+
+</html>

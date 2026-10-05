@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>page2</title>
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet" />
+    <style>
+      * {
+        /* css reset */
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Roboto', Arial, sans-serif;
+      }
+
+      body {
+        /* bring everything to center of the page */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        /* change the height of the body to view port height */
+        height: 100vh;
+        background: linear-gradient(#d1dcd9, #67919f);
+      }
+
+      .login-container {
+        border: 1px solid gray;
+        border-radius: 10px;
+        background-color: white;
+        padding: 40px;
+        width: 100%;
+        max-width: 400px;
+        box-shadow: 10px 15px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .login-container .login-header {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .login-header h1 {
+        font-size: 28px;
+      }
+
+      .login-header p {
+        font-size: 18px;
+        color: gray;
+      }
+
+      .form-group {
+        margin-bottom: 15px;
+      }
+
+      .form-group label {
+        width: 100%;
+        display: block;
+        font-size: 14px;
+        margin-bottom: 5px;
+      }
+
+      .form-group input {
+        width: 100%;
+        padding: 15px;
+        border-radius: 10px;
+        border: 1px solid #e1e1e1;
+        font-size: 14px;
+      }
+
+      .remember {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+      }
+
+      .remember a {
+        text-decoration: none;
+        color: rgb(49, 49, 247);
+      }
+
+      .social-media-button-container {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .social-media-button-container button {
+        padding: 12px;
+        background: linear-gradient(#67919f, #6e6e6e);
+        border: none;
+        border-radius: 10px;
+        color: white;
+        box-shadow: 5px 5px 5px #e1e1e1;
+      }
+
+      .divider {
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      .btn-login {
+        width: 100%;
+        padding: 10px;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        height: 50px;
+        background: linear-gradient(to right, #1e5799 0%, #207cca 26%, #2989d8 50%, #7db9e8 100%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="login-header">
+        <h1>Welcome Back</h1>
+        <p>Login to the application</p>
+      </div>
+      <form>
+        <div class="form-group">
+          <label for="">Email</label>
+          <input
+            placeholder="username@company.com"
+            type="email" />
+        </div>
+        <div class="form-group">
+          <label for="">Password</label>
+          <input
+            placeholder="********"
+            type="password" />
+        </div>
+        <div class="remember">
+          <div class="remember-me">
+            <input type="checkbox" />
+            <label for="">Remember me</label>
+          </div>
+          <div class="forgot-password">
+            <a href="">Forgot Password?</a>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <button class="btn-login">Login</button>
+        </div>
+      </form>
+
+      <div class="divider">or login with</div>
+
+      <div class="social-media-button-container">
+        <button>goolge</button>
+        <button>facebook</button>
+        <button>github</button>
+        <button>apple</button>
+      </div>
+    </div>
+  </body>
+</html>

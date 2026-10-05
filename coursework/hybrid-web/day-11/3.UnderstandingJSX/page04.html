@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSX</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <!-- Add the babel which is Javascript compiler which helps in
+    compiling JSX to the JS code  -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+    <button onclick="getProducts()">Get Products</button>
+    <ol id="root">
+
+    </ol>
+    <script type="text/babel">
+        function getProducts() {
+            const root = ReactDOM.createRoot(document.getElementById('root'))
+            const arr = []
+            const st = window.performance.now()
+            for (let i = 1; i <= 10000; i++) {
+                const div = <li>product - {i}</li>
+                arr.push(div)
+            }
+            root.render(arr)
+            const et = window.performance.now()
+            console.log(`Time taken - ${(et - st).toFixed(2)}`)
+            // 10000 -> 12.20
+        }
+    </script>
+</body>
+
+</html>

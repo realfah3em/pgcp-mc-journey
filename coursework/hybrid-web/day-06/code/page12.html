@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Object</h1>
+
+    <script>
+      // object
+      // - collection of key-value pairs
+
+      function function1() {
+        // create an object using object literal
+        // JSON: javascript object notation
+        const person = {
+          name: 'person1',
+          address: 'pune',
+          age: 40,
+          salary: 15.5,
+          canVote: true,
+        }
+        console.log(person)
+      }
+
+      // function1()
+
+      function function2() {
+        // create an object using Object
+        const person = new Object()
+        person.name = 'person1'
+        person.age = 40
+        person.canVote = true
+        person.salary = 15.5
+        person.address = 'pune'
+        console.log(person)
+
+        const car = new Object()
+        car.model = 'triber'
+        car.company = 'renault'
+        console.log(car)
+      }
+
+      // function2()
+
+      function function3() {
+        // create an object using constructor function
+        // this
+        // - hidden argument for every function
+        // - reference to the object
+        //   (browser: window, nodejs: Module)
+        // - sets the context for the function
+        function Person(name, age, address, salary) {
+          // adding the properties
+          this.name = name
+          this.age = age
+          this.salary = salary
+          this.address = address
+
+          // adding the method
+          // this.canVote = () => {
+          //   console.log(`inside canVote`)
+          // }
+        }
+
+        // all the prototype methods are shared
+        // among all the objects of this function
+        Person.prototype.canVote = () => {
+          console.log(`inside canVote`)
+        }
+
+        // create object of Person
+        const p1 = new Person('person1', 30, 'pune', 15.5)
+
+        // adding a method on the object
+        // p1.canVote = () => {
+        //   console.log(`inside canVote`)
+        // }
+        console.log(p1)
+        p1.canVote()
+
+        const p2 = new Person('person2', 50, 'mumbai', 18.9)
+        // adding a method on the object
+        // p2.canVote = () => {
+        //   console.log(`inside canVote`)
+        // }
+        console.log(p2)
+        p2.canVote()
+
+        // console.log('inside function3')
+        // console.log(this)
+      }
+
+      // function3()
+
+      function function4() {
+        class Person {
+          constructor(name, age, address, salary) {
+            this.name = name
+            this.age = age
+            this.address = address
+            this.salary = salary
+          }
+
+          canVote() {
+            console.log(`inside canVote`)
+          }
+        }
+
+        // create an object of Person class
+        const p1 = new Person('person1', 30, 'pune', 15.5)
+        console.log(p1)
+      }
+
+      function4()
+
+      // class Person {
+      //    String name;
+      //    int age;
+      //    Person(String name, int age) {
+      //        this.name = name;
+      //        this.age = age;
+      //    }
+      // }
+      //
+      // Person p = new Person("person1", 30)
+    </script>
+  </body>
+</html>
