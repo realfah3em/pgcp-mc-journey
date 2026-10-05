@@ -1,7 +1,7 @@
 -- Open Command Prompt
 -- Login through root user 
 cmd > mysql -u root -p
-cmd > Enter password : manager
+cmd > Enter password : <your-root-password>
 
 mysql > 
 /*
@@ -11,7 +11,7 @@ Login to mysql
 */
 
 -- password should be without the spaces between -p
-cmd > mysql -u root -pmanager
+cmd > mysql -u root -pYOUR_ROOT_PASSWORD
 
 
 --root is the main user(Admin : having all the rights on all the databases)
@@ -34,11 +34,11 @@ mysql > \! cls
 mysql > SHOW DATABASES;
 
 
--- Create a new user as sunbeam with password as sunbeam
--- username : sunbeam
--- password : sunbeam
+-- Create a new user named course_user and choose a unique password
+-- username : course_user
+-- password : choose a unique password
 -- SYNTAX : CREATE USER username IDENTIFIED BY 'pwd';
-mysql > CREATE USER sunbeam IDENTIFIED BY 'sunbeam'; 
+mysql > CREATE USER course_user IDENTIFIED BY 'REPLACE_WITH_UNIQUE_PASSWORD'; 
 
 -- To check the user created :
 -- The table user contains the column name as user. 
@@ -53,10 +53,10 @@ SELECT user FROM user;
 USE classwork_db;
 
 -- root needs to give all the permissions on classwork database 
--- to sunbeam user.
+-- to course_user.
 -- syntax :  GRANT privileges ON database_name TO username;
 
-GRANT ALL PRIVILEGES ON classwork_db.* TO sunbeam;
+GRANT ALL PRIVILEGES ON classwork_db.* TO course_user;
 
 
 -- exit from root login and relogin through sunbeam user
